@@ -17,7 +17,7 @@
     @foreach ($menu as $item)
     <div class="bg-[#1a1a1a] p-6 rounded-3xl border-2 border[#333] hover:border-[#ff8c00] transition-all group">
         <div class="h-40 bg-[#333] rounded-2xl mb-4 flex items-center justify-center">
-            <span class="text-5xl group-hover: scale-110 transition-transform">☕☕</span>
+            <span class="text-5xl group-hover: scale-110 transition-transform"></span>
         </div>
         <h3 style="color: #ff8c00; font-size: 1.5rem; margin: 15px 0;">{{$item['nama']}}</h3>
         <p style="color: #ffffff; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">{{$item['desc']}}</p>
