@@ -3,6 +3,11 @@
 @section('content')
 <div style="text-align: center; width: 90%; max-width: 700px; margin:auto; background: rgba (0,0,0,0,0.25); color: #ffffff; padding: 30px; border-radius: 15px; border: 3px solid #ff8c00; box-shadow: 0 0 10px #ff8c00;">
    <h1 style="font-size: 2rem; font-weight: bold; color:#ff8c00; margin-bottom: 10px; ">The Roawring Coffee Menu</h1>
+   @if(request()->get('status')=='sukses')
+   <div style="background: rgba(40, 167, 69, 0.2); color: #28a745; padding: 15px; border-radius: 10px; border: 1px solid #28a745; margin-bottom: 30px; font-weight: bold;">
+    ✔Produk berhasil ditambahkan ke daftar kasir
+   </div>
+   @endifc
 
    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
 
@@ -23,7 +28,7 @@
         <p style="color: #ffffff; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">{{$item['desc']}}</p>
         <div style="font-size: 1.8rem; font-weight: bold; color: #ffffff; margin-bottom: 20px;">Rp{{$item['harga']}}</div>
         <button style="background: #ff8c00; color: black; padding: 10px 25px; border:#706f6c; border-radius: 5px; font-weight: bold; cursor: ponter; text-transform:uppercase;">
-            Tambah ke Kasir
+            <a href="{{route('tampilan.detail')}}?status=sukses">Tambah ke kasir</a>
         </button>
     </div>
     @endforeach
