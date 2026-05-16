@@ -7,7 +7,7 @@
    <div style="background: rgba(40, 167, 69, 0.2); color: #28a745; padding: 15px; border-radius: 10px; border: 1px solid #28a745; margin-bottom: 30px; font-weight: bold;">
     ✔Produk berhasil ditambahkan ke daftar kasir
    </div>
-   @endifc
+   @endif
 
    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
 
