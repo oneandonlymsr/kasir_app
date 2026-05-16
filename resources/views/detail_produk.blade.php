@@ -13,15 +13,16 @@
 
    @php
    $menu = [
-        ['nama' => 'Kopi Espresso (The Roawr)', 'harga' => '15.000','desc' => 'Ekstrak kopi murni yang tajam dan kuat. Langsung memberikan energi instan untuk menerjang hari.'],
-        ['nama' => 'Kopi Latte (Soft Stripe)', 'harga' => '20.000', 'desc' => 'Perpaduan lembut espresso dan susu creamy. Sehalus langkah harimau, tenang namun mematikan.'],
-        ['nama' => 'Kopi Cappuccino (Tiger Foam)', 'harga' => '25.000', 'desc' => 'Espresso dengan busa susu yang tebal dan taburan cokelat di atasnya. Rasa klasiknya bikin kamu merasa jadi raja rimba di setiap seruputan.']
+        ['nama' => 'Kopi Espresso (The Roawr)', 'harga' => '15.000', 'gambar' => 'espresso.jpg', 'desc' => 'Ekstrak kopi murni yang tajam dan kuat. Langsung memberikan energi instan untuk menerjang hari.'],
+        ['nama' => 'Kopi Latte (Soft Stripe)', 'harga' => '20.000', 'gambar' => 'latte.jpg', 'desc' => 'Perpaduan lembut espresso dan susu creamy. Sehalus langkah harimau, tenang namun mematikan.'],
+        ['nama' => 'Kopi Cappuccino (Tiger Foam)', 'harga' => '25.000', 'gambar' => 'capuccino.jpg', 'desc' => 'Espresso dengan busa susu yang tebal dan taburan cokelat di atasnya. Rasa klasiknya bikin kamu merasa jadi raja rimba di setiap seruputan.']
     ];
     @endphp
 
     @foreach ($menu as $item)
     <div class="bg-[#1a1a1a] p-6 rounded-3xl border-2 border[#333] hover:border-[#ff8c00] transition-all group">
-        <div class="h-40 bg-[#333] rounded-2xl mb-4 flex items-center justify-center">
+        <div class="h-40 bg-[#333] rounded-2xl mb-4 flex items-center justify-center" style="margin-top: 15px; margin-bottom: 25px;">
+            <img src="{{ asset('img/' . $item['gambar']) }}" style="height: 50%; width: 50%; object-fit: cover;" alt="{{ $item['nama'] }}">
             <span class="text-5xl group-hover: scale-110 transition-transform"></span>
         </div>
         <h3 style="color: #ff8c00; font-size: 1.5rem; margin: 15px 0;">{{$item['nama']}}</h3>
