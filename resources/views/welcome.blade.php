@@ -5,7 +5,7 @@
    <h1 style="font-size: 2rem; font-weight: bold; color:#ff8c00; margin-bottom: 10px; ">Selamat Datang di The Roawring Coffee!</h1>
    <p style="font-size: 1.2rem; color: #706f6c; margin-bottom: 20px;">Sistem Kasir Ini Sudah Berhasil Menggunakan Master Layout</p>
    <button style="background: #ff8c00; color: black; padding: 10px 25px; border:#706f6c; border-radius: 5px; font-weight: bold; cursor: ponter; text-transform:uppercase;">
-      Mulai Transaksi
+      <a href="{{route('tampilan.detail')}}" class="btn"> Mulai Transaksi</a>
    </button>
   </div>
 @endsection
